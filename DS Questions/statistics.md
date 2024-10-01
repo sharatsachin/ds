@@ -885,5 +885,3 @@ For maximization, we have $\frac{\partial \log L(\theta)}{\partial \theta} = 0$ 
 
 - the likelihood function is $$L(a, b) = \prod_{i=1}^N \frac{1}{b - a}$$
 - the maximum likelihood estimate is $$\hat{a} = \min_{i=1}^N x_i, \hat{b} = \max_{i=1}^N x_i$$
-
-
