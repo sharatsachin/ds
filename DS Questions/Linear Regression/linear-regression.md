@@ -230,11 +230,11 @@ Squaring makes the function differentiable everywhere, unlike absolute value. It
 
 Gradient descent: Iteratively update parameters in the direction of steepest decrease in the loss function.
 
-## What is R**2 and importance of it?
+## What is $R^2$ and importance of it?
 
 R-squared (R²) measures the proportion of variance in the dependent variable explained by the independent variables. It ranges from 0 to 1, with higher values indicating better fit.
 
-## What is the formula for R**2?
+## What is the formula for $R^2$?
 
 $$ R^2 = 1 - \frac{SS_{res}}{SS_{tot}} $$
 
@@ -244,11 +244,11 @@ Where $SS_{res} = \sum_{i=1}^m (y^{(i)} - h(x^{(i)}))^2$ is the sum of squared r
 
 Variance Inflation Factor (VIF) measures multicollinearity in regression analysis. High VIF (>5-10) indicates high correlation between predictors.
 
-## What is the difference between R**2 & Adjusted R**2?
+## What is the difference between $R^2$ & Adjusted $R^2$?
 
 Adjusted R² penalizes the addition of unnecessary predictors, while R² always increases with more predictors. Adjusted R² is more suitable for comparing models with different numbers of predictors.
 
-## What is the formula for Adjusted R**2?
+## What is the formula for Adjusted $R^2$?
 
 $$ \text{Adjusted } R^2 = 1 - \frac{(1 - R^2)(n - 1)}{n - k - 1} $$
 
