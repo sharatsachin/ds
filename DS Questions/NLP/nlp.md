@@ -83,3 +83,37 @@ Vector representation of text converts text into numerical vectors for machine l
 5. Document embeddings: Single vector representing entire document (e.g., Doc2Vec, BERT).
 
 These representations capture different aspects of text (frequency, semantics, context) and are chosen based on the specific task and available resources.
+
+## Give a short history of Transformer models?
+- Introduced in the paper "Attention is All You Need" by Vaswani et al. (June 2017)
+- Replaced recurrent neural networks (RNNs) and convolutional neural networks (CNNs) in many NLP tasks
+- June 2018 - GPT (Generative Pre-trained Transformer) by OpenAI
+- October 2018 - BERT (Bidirectional Encoder Representations from Transformers) by Google
+- February 2019 - GPT-2 by OpenAI
+- October 2019 - DistilBERT by Hugging Face
+- November 2019 - T5 (Text-to-Text Transfer Transformer) by Google and BART (Bidirectional and Auto-Regressive Transformers) by Facebook
+- May 2020 - GPT-3 by OpenAI (175 billion parameters)
+
+## Different kinds of transformer models?
+
+There are broadly 3 types of transformer models:
+1. **Auto-regressive models**: Generate output sequentially (e.g., GPT, GPT-2, GPT-3).
+2. **Auto-encoder models**: Encode and decode sequences (e.g., BERT, RoBERTa, DistilBERT).
+3. **Seq2Seq models**: Translate sequences from one domain to another (e.g., T5, BART).
+
+
+
+
+
+
+
+## How do Transformers work?
+
+Transformers are a type of neural network architecture that uses self-attention mechanisms to process sequences of data. Key components include:
+- Multi-head self-attention: Attend to different parts of the input sequence simultaneously.
+- Position-wise feedforward networks: Apply non-linear transformations to each position independently.
+- Layer normalization and residual connections: Stabilize training and facilitate deeper networks.
+- Encoder-decoder architecture: Used in tasks like machine translation, summarization, and question answering.
+
+Transformers have revolutionized natural language processing tasks by capturing long-range dependencies and contextual information effectively.
+
