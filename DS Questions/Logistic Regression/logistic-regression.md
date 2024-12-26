@@ -12,8 +12,6 @@ Logistic regression is a statistical method for analyzing a dataset in which the
 4. There should be a linear relationship between the independent and dependent variables.
 5. The sample size should be sufficiently large.
 
-Here are concise answers to the questions, using MathJax notation for math where appropriate:
-
 ## What is the sigmoid function?
 
 The sigmoid function is:

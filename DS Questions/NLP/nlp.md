@@ -101,12 +101,6 @@ There are broadly 3 types of transformer models:
 2. **Auto-encoder models**: Encode and decode sequences (e.g., BERT, RoBERTa, DistilBERT).
 3. **Seq2Seq models**: Translate sequences from one domain to another (e.g., T5, BART).
 
-
-
-
-
-
-
 ## How do Transformers work?
 
 Transformers are a type of neural network architecture that uses self-attention mechanisms to process sequences of data. Key components include:

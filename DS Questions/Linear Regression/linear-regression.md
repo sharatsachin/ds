@@ -6,7 +6,7 @@ Linear regression can be used to fit a model to an observed data set of values o
 
 ## What is the nomenclature for input variables, output variables, training example, set?
 
-- Input variables: $x^{(i)}$ is the vector of input variables for the i-th training example, $x^{(i)} = [x_1^{(i)}, x_2^{(i)}, ..., x_n^{(i)}]_{(n + 1) \times 1}$, where $x_0^{(i)} = 1$ and $n$ is the number of features.
+- Input variables: $x^{(i)}$ is the vector of input variables for the i-th training example, $x^{(i)} = [x_0^{(i)}, x_1^{(i)}, x_2^{(i)}, ..., x_n^{(i)}]_{(n + 1) \times 1}$, where $x_0^{(i)} = 1$ and $n$ is the number of features.
 - Output variables: $y^{(i)}$ is the output variable for the i-th training example.
 - Training example: $(x^{(i)}, y^{(i)})$ is the i-th training example.
 - Training set: $\{(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), ..., (x^{(m)}, y^{(m)})\}$ is the training set of m examples.
@@ -172,6 +172,7 @@ Elastic Net regularization is a combination of $L1$ and $L2$ regularization. It 
 
 ## What are the assumptions behind linear regression?
 
+[Link](https://www.analyticsvidhya.com/blog/2016/07/deeper-regression-analysis-assumptions-plots-solutions/)
 1. **Linearity**: The relationship between the independent and dependent variables is linear.
 2. **Independence**: The residuals are independent of each other.
 3. **Normality**: The residuals follow a normal distribution.
@@ -186,6 +187,8 @@ You can check for linearity by plotting the residuals against the fitted values.
 ## How do you check for independence in linear regression? Fixes?
 
 You can check for independence using the Durbin-Watson test or by plotting the residuals against time. If the residuals show a pattern over time, there may be autocorrelation. You can add lag terms / use time series models like ARIMA to account for autocorrelation.
+
+Durbin Watson statistic : $2$ -> no autocorrelation, $0-2$ -> +ve autocorrelation, $2-4$ -> -ve autocorrelation
 
 ## How do you check for normality in linear regression? Fixes?
 
@@ -333,3 +336,13 @@ Where $n$ is the number of observations.
 4. **Jarque-Bera**: Tests the skewness and kurtosis of the residuals. A value close to zero indicates normal distribution.
 5. **Durbin-Watson**: Tests for autocorrelation in the residuals. Value of 2 indicates no autocorrelation, while values < 2 or > 2 indicate positive or negative autocorrelation.
 6. **Condition Number**: Measures multicollinearity in the model. Values > 30 indicate multicollinearity.
+
+## What are the drawbacks of the linear model?
+
+1. Assumes linear relationship between predictors and response.
+2. Sensitive to outliers.
+3. Assumes independence of observations.
+4. Assumes homoscedasticity.
+5. Assumes normality of residuals.
+6. Prone to overfitting with many predictors.
+7. Cannot capture non-linear relationships.
