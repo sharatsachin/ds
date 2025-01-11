@@ -5,31 +5,6 @@
 The hypothesis of normality is a hypothesis that the data is normally distributed. It is often tested using the Shapiro-Wilk test, the Kolmogorov-Smirnov test, or the Anderson-Darling test.
 Normal distribution is characterized by the mean and the standard deviation. The mean is the center of the distribution and the standard deviation is the measure of the spread of the distribution, and normality implies that the data is symmetric around the mean, with most of the data points lying close to the mean.
 
-## What is correlation? What is covariance? What is the difference between the two?
-
-**Correlation** is a statistical measure that describes the size and direction of a relationship between two or more variables. A positive correlation indicates the extent to which those variables increase or decrease in parallel; a negative correlation indicates the extent to which one variable increases as the other decreases.
-Correlation is dimensionless and lies between -1 and 1.
-**Covariance** is a measure of the joint variability of two random variables. If the greater values of one variable mainly correspond with the greater values of the other variable, and the same holds for the lesser values, i.e., the variables tend to show similar behavior, the covariance is positive. In the opposite case, when the greater values of one variable mainly correspond to the lesser values of the other, i.e., the variables tend to show opposite behavior, the covariance is negative.
-Covaliance is in the units of the product of the units of the two variables.
-
-## How to find correlation between categorical & numerical columns
-
-- Cramer's V for two categorical variables
-- Point biserial correlation for one categorical and one numerical variable
-- $\eta$-squared for one categorical and one numerical variable
-
-## What is the confidence score?
-
-The confidence score is the probability that the value of a parameter falls within a specified range of values. It is a measure of the reliability of the estimate. It is usually set to 95% or 99%.
-
-## What is the confidence interval?
-
-A range of values, derived from the sample statistics, that is likely to contain the value of an unknown population parameter. The interval has an associated confidence level that the true parameter is in the proposed range.
-
-## What is Chebyshev’s Theorem
-For any data set, the proportion of observations that lie within $k$ standard deviations of the mean is at least $1 - \frac{1}{k^2}$, where $k$ is any positive number larger than 1.
-- at least 75% of the data lie within two standard deviations, 89% within three standard deviations, etc.
-
 ## What is hypothesis testing?
 
 A method of statistical inference. It is used to determine whether there is enough evidence in a sample of data to decide between two competing claims (hypotheses) about a population parameter. It allows us to make probabilistic statements about a population parameter based on a statistic computed from a sample randomly drawn from that population.
@@ -433,14 +408,22 @@ Steps:
 
 ## What are some general metrics used to evaluate the performance of a time series model?
 
-1. Mean Absolute Deviation (MAD)
-    - gives less weight to large errors
-    $$MAD = \frac{\sum_{t=1}^n |y_t - \hat{y}_t|}{n}$$
+1. Mean Absolute Error (MAE)
+    - gives equal weight to all errors
+    - more robust to outliers, but less sensitive to large errors
+    - MAE optimizes the median, but may not be unique
+    $$MAE = \frac{\sum_{t=1}^n |y_t - \hat{y}_t|}{n}$$
+1. MAE %
+    - gives a percentage of the MAE
+    $$MAE\% = \frac{\sum_{t=1}^n |y_t - \hat{y}_t|}{\sum_{t=1}^n y_t} \times 100$$
 2. Mean Squared Error (MSE)
-    - gives more weight to large errors
+    - gives more weight to large errors, but more sensitive to outliers
+    - optimizes for the mean
     $$MSE = \frac{\sum_{t=1}^n (y_t - \hat{y}_t)^2}{n}$$
 3. Mean Absolute Percentage Error (MAPE)
     - gives less overall weight to large errors if the time series values are large
+    - puts a heavier penalty on negative errors than positive ones
+    - can give misleading results when actual values are very small, biased towards forecasts that are too low
     $$MAPE = \frac{\sum_{t=1}^n \frac{|y_t - \hat{y}_t|}{y_t}}{n} \times 100$$
 4. Largest Absolute Deviation (LAD)
     - tells us that all deviations fall below a certain threshold value
@@ -448,6 +431,15 @@ Steps:
 5. SMAPE (Symmetric Mean Absolute Percentage Error)
     - gives less overall weight to large errors if the time series values are small
     $$SMAPE = \frac{2}{n} \sum_{t=1}^n \frac{|y_t - \hat{y}_t|}{|y_t| + |\hat{y}_t|} \times 100$$
+6. Accuracy
+    $$Accuracy = 100 - \frac{\sum_{t=1}^n |y_t - \hat{y}_t|}{\sum_{t=1}^n y_t} \times 100 = 100 - MAE\%$$
+    - ranges from $-\infty$ to $100$, with $100$ indicating a perfect forecast
+7. Bias
+    $$Bias = \frac{\sum_{t=1}^n (y_t - \hat{y}_t)}{\sum_{t=1}^n y_t} \times 100$$
+    - ranges from $-100$ to $\infty$, with $0$ indicating no bias
+8. Ideal forecast metric
+    - the ideal forecast $$|MAE \%| + |Bias|$$
+    - ranges from $0$ to $\infty$, with $0$ indicating a perfect forecast
 
 ## What is the Holt-Winters method for forecasting?
 

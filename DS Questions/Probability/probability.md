@@ -166,6 +166,13 @@
   - negative covariance: variables tend to show opposite behavior
   - in the units of the product of the units of the two variables
 
+## What is the pearson correlation coefficient?
+$$ r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} $$
+ranges from -1 to 1, where:
+- $r = 1$ indicates a perfect positive linear relationship
+- $r = -1$ indicates a perfect negative linear relationship
+- $r = 0$ indicates no linear relationship
+
 ## How can you find correlation between categorical and numerical columns?
 - **Cramer's V** for two categorical variables
 - **Point biserial correlation or $\eta$-squared** for one categorical and one numerical variable

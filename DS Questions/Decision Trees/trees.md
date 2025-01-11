@@ -32,7 +32,6 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 ```
 
-
 ## What are the differences between classification and regression trees?
 
 Classification trees are used when the target variable is categorical, while regression trees are used when the target variable is continuous. The splitting criterion for classification trees is typically based on impurity measures such as entropy or Gini index, while regression trees use variance reduction.
