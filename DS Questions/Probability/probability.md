@@ -14,7 +14,7 @@
   - examples include age, height, weight, income, etc.
 
 ## What is the difference between ratio and interval variables?
-- **interval**: have a true zero point
+- **interval**: do not have a true zero point
   - examples include temperature (Celsius, Fahrenheit), dates, and times
 - **ratio**: have a true zero point
   - examples include height, weight, distance, and time
@@ -456,6 +456,7 @@ $$\begin{array}{c|ccccccccccc} x &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &12 \\ \hline P
 ## What is the Poisson distribution?
 - discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time
 - $f(k; \lambda) = \Pr(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$
+- where $\lambda$ is the average number of events in the interval, and $k$ takes values $0, 1, 2, ...$
 
 ## What is the mean of the Poisson random variable?
 - the mean of the Poisson random variable $X$ with parameter $\lambda$ is given by the formula:
