@@ -181,6 +181,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
+    { name = "itables" },
     { name = "lightgbm" },
     { name = "matplotlib" },
     { name = "optuna" },
@@ -192,6 +193,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=6.29.5" },
+    { name = "itables", specifier = ">=2.2.4" },
     { name = "lightgbm", specifier = ">=4.5.0" },
     { name = "matplotlib", specifier = ">=3.10.0" },
     { name = "optuna", specifier = ">=4.2.0" },
@@ -309,6 +311,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/36/80/4d2a072e0db7d250f134bc11676517299264ebe16d62a8619d49a78ced73/ipython-8.32.0.tar.gz", hash = "sha256:be2c91895b0b9ea7ba49d33b23e2040c352b33eb6a519cca7ce6e0c743444251", size = 5507441 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/e1/f4474a7ecdb7745a820f6f6039dc43c66add40f1bcc66485607d93571af6/ipython-8.32.0-py3-none-any.whl", hash = "sha256:cae85b0c61eff1fc48b0a8002de5958b6528fa9c8defb1894da63f42613708aa", size = 825524 },
+]
+
+[[package]]
+name = "itables"
+version = "2.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ipython" },
+    { name = "numpy" },
+    { name = "pandas" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/32/de/d088ee6e3b9c2a05e7565bcbb8b3138c6ee30e62b994df462afd4e77c03f/itables-2.2.4.tar.gz", hash = "sha256:6d2810fab5cc67260f69c9fa7c6930bd7a39f92aaff2264dc4e914eaa7a005e5", size = 2436243 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/a3/edfcffc33b9e23f5a5e87178c2ee7a882a6ec6654d0e0c96849cb88519f5/itables-2.2.4-py3-none-any.whl", hash = "sha256:94f0298a4778ac957eef1d0bf0ff6ebffd3c68c7faef741cc083c31c97316952", size = 1407012 },
 ]
 
 [[package]]
