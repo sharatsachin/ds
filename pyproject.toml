@@ -6,7 +6,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=6.29.5",
+    "lightgbm>=4.5.0",
     "matplotlib>=3.10.0",
+    "optuna>=4.2.0",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "xgboost>=2.1.4",
 ]
